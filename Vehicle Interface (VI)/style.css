@@ -1,0 +1,227 @@
+/* --- RESET & BODY --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: #000000; /* Deep OLED Black */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* Prevents scrolling on the tablet */
+    user-select: none; /* Prevents text highlighting */
+}
+
+/* --- DASHBOARD GRID --- */
+.rideshare-dashboard {
+    display: flex;
+    flex-direction: row; /* FORCES side-by-side layout */
+    width: 95vw;
+    max-width: 1400px;
+    height: 90vh;
+    gap: 30px;
+}
+
+/* --- LEFT SIDE: TRIP PANEL --- */
+.trip-panel {
+    flex: 1.2;
+    background: #151517;
+    border-radius: 32px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brand-header h2 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.brand-header p {
+    font-size: 1.2rem;
+    color: #8e8e93;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.welcome-message h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.welcome-message p {
+    color: #98989d;
+    font-size: 1.3rem;
+}
+
+.eta-display h1 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.eta-display p {
+    font-size: 1.4rem;
+    color: #e5e5ea;
+    margin-bottom: 5px;
+}
+
+.arrival-time {
+    color: #8e8e93 !important;
+    font-size: 1.2rem !important;
+}
+
+.map-placeholder {
+    background: #242426;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8e8e93;
+    font-size: 1.2rem;
+    height: 150px;
+}
+
+/* --- RIGHT SIDE: CONTROLS PANEL --- */
+.controls-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.control-pod {
+    background: #151517;
+    border-radius: 32px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 328.333333333px;
+}
+
+    .control-pod label {
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        color: #8e8e93;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    height: 100%;
+}
+
+/* --- MASSIVE TOUCHSCREEN BUTTONS --- */
+button, .action-btn {
+    flex: 1;
+    background: #242426;
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background 0.1s ease;
+    height: 100px; /* Forces a massive hit area */
+    width: 100%;
+    margin-top: 10px;
+}
+
+    button:active, .action-btn:active {
+        background: #ffffff;
+        color: #000000;
+    }
+
+.browser-btn {
+    color: #ffffff !important;
+    height: 120px !important;
+    flex: 1 !important;
+    background: #242426;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background 0.1s ease;
+    height: 120px; /* Forces a massive hit area */
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+    .browser-btn:active {
+        background: #005bb5;
+        color: #ffffff;
+    }
+
+.support-pod {
+    background: #1c1515;
+}
+/* Slight red tint to the background */
+.warning {
+    background: #3a1c1c;
+    color: #ff453a;
+}
+
+    .warning:active {
+        background: #ff453a;
+        color: #ffffff;
+    }
+
+.temp {
+    margin-top: 40px;
+}
+
+#screen-visualizer {
+    position: fixed !important;
+    bottom: 30px !important;
+    left: 50% !important;
+    transform: translateX(-50%) rotate(180deg) !important;
+    display: flex;
+    gap: 8px;
+    z-index: 9999;
+    margin-top:30px;
+}
+
+.line {
+    width: 6px;
+    height: 20px;
+    background: #007bff;
+}
+
+@keyframes bounce {
+    to {
+        height: 50px;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+#btn-glide-ai {
+    position: relative;
+    overflow: hidden;
+}

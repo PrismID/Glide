@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Glide - Your private ride.</title>
+</head>
+<body>
+
+    <div class="rideshare-dashboard">
+
+        <!-- LEFT SIDE: Journey Progress -->
+        <div class="trip-panel">
+            <div class="brand-header">
+                <h2>GLIDE</h2>
+                <p>Your private ride.</p>
+            </div>
+
+            <div class="welcome-message">
+                <h3>Good afternoon.</h3>
+                <p>Sit back, relax, and enjoy the ride.</p>
+            </div>
+
+            <div class="eta-display">
+                <h1>12 Min</h1>
+                <p>Arriving at: <strong>123 Main St, Wellington, FL</strong></p>
+                <p class="arrival-time">Est. Arrival: 3:55 PM</p>
+            </div>
+
+            <div class="map-placeholder">
+                <p>📍 Live Route Map</p>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE: Comfort Controls -->
+        <div class="controls-panel">
+
+            <div class="control-pod">
+                <label>Cabin Temperature</label>
+                <div class="button-group">
+                    <button onclick="sendToCar('TEMP_DOWN')" class="tempdown" data-command="tempdown" id="tempdown">-</button>
+                    <h1 class="temp" id="temp-display">72°F</h1>
+                    <button onclick="sendToCar('TEMP_UP')" class="tempup" data-command="tempup" id="tempup">+</button>
+                </div>
+            </div>
+
+            <div class="control-pod">
+                <label>Entertainment</label>
+                <div class="button-group">
+                </div>
+                <!-- FIXED BROWSER BUTTON STYLING -->
+                <a href="./browser/" class="action-btn browser-btn">Open Web Browser</a>
+            </div>
+
+            <div class="control-pod support-pod">
+                <label>Help & Support</label>
+                <div class="button-group">
+                    <button onclick="sendToCar('CALL_REMOTE_SUPPORT')" id="support-btn">Call Support</button>
+                    <button class="warning" id="emergency-btn" onpointerdown="startEmergency()" onpointerup="cancelEmergency()">Call 911</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script type="module" src="vi.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMnBK12_2U5lT9hAYbKx8vaEgNWYJshcs&libraries=places" async defer></script>
+</body>
+</html>

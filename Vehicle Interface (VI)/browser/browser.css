@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar {
+    height: 60px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.back-btn {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* The webview takes up the remaining space */
+webview {
+    flex-grow: 1;
+    border: none;
+}
