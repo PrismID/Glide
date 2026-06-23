@@ -10,10 +10,10 @@ function exitToDashboard() {
             storages: ['cookies', 'localstorage', 'cache', 'indexeddb']
         }, () => {
             // 2. Once cleared, navigate back
-            window.location.href = '../';
+            window.location.href = 'https://prismid.github.io/Glide/Vehicle%20Interface%20(VI)/';
         });
     } else {
         // Fallback if wv isn't ready
-        window.location.href = '../browser/';
+        window.location.href = 'https://prismid.github.io/Glide/Vehicle%20Interface%20(VI)/browser/';
     }
 }
