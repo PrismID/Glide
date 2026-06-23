@@ -1,4 +1,5 @@
 // browser.js
+const exitToDashboard = getElementById('backBtn')
 function exitToDashboard() {
     const wv = document.getElementById('browser-view');
 
