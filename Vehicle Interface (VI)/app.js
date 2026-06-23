@@ -5,32 +5,30 @@ const btnDown = document.getElementById('tempdown');
 const btnPanic = document.getElementById('emergency-btn');
 const btnSupport = document.getElementById('support-btn');
 
-// Temperature Logic
+// --- Helper: Robust Temperature Parsing ---
+const getCurrentTemp = () => parseInt(tempDisplay.innerText.replace('°F', '')) || 72;
+
+// --- Temperature Logic ---
 btnUp.addEventListener('click', () => {
-    let currentTemp = parseInt(tempDisplay.innerText);
-    tempDisplay.innerText = (currentTemp + 1) + "°F";
+    tempDisplay.innerText = (getCurrentTemp() + 1) + "°F";
 });
 
 btnDown.addEventListener('click', () => {
-    let currentTemp = parseInt(tempDisplay.innerText);
-    tempDisplay.innerText = (currentTemp - 1) + "°F";
+    tempDisplay.innerText = (getCurrentTemp() - 1) + "°F";
 });
 
-// PANIC LOGIC: This should trigger a car-wide alert, not change temperature!
+// --- Emergency & Support Logic ---
 btnPanic.addEventListener('click', () => {
-    alert("EMERGENCY: Notifying dispatch and pulling over.");
-    // Insert your vehicle emergency API call here
+    // In a real vehicle, this would talk to the CAN-bus or vehicle API
+    console.log("CRITICAL: Emergency Alert Sent to Dispatch");
 });
 
 btnSupport.addEventListener('click', () => {
-    // Insert your support call logic here
+    // Logic for remote support call
+    console.log("Initiating support call...");
 });
 
-// THE SECURE BROWSER LAUNCH
-// Note: We open 'browser.html', NOT an .exe
-function openSecureBrowser(event) {
-    event.preventDefault();
-
-    // Open the browser interface as a separate window
-    const win = window.open('browser.html', '_blank', 'width=1000,height=800,frame=yes');
-}
+// --- Security: Initialize on load ---
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Glide Dashboard Systems Online.");
+});
