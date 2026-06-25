@@ -26,4 +26,6 @@ body {
 webview {
     flex-grow: 1;
     border: none;
+    display: flex;
+    width: 100%;
 }
