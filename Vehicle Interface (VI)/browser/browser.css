@@ -23,7 +23,7 @@ body {
     cursor: pointer;
 }
 /* The webview takes up the remaining space */
-iframe {
+.gcse-search {
     flex-grow: 1;
     border: none;
     display: flex;
