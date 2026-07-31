@@ -3,19 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glide - Your private ride</title>
+    <title>Dashboard - Glide</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="dashboard-container">
+        <!-- Live Map Background -->
+        <div id="map">
+            <!-- Luxury Ambient Map Fallback when offline or API not initialized -->
+            <div class="map-fallback">
+                <div class="grid-overlay"></div>
+                <div class="ambient-glow"></div>
+                <div class="mock-marker pulse">📍</div>
+                <span class="fallback-status">GLIDE SECURE NAVIGATION ONLINE</span>
+            </div>
+        </div>
 
-    <div id="map"></div>
-
+        <!-- Floating UI Panel -->
         <div id="ui-panel">
-            <h1>Glide</h1>
+            <div class="brand-badge">GLIDE</div>
+            <h1>Your private ride.</h1>
             <h3>Where to?</h3>
-            <input type="text" id="destination-input" placeholder="Enter destination...">
+            <div class="input-container">
+                <span class="location-dot"></span>
+                <input type="text" id="destination-input" placeholder="Enter destination...">
+            </div>
             <button id="btn-request">Continue</button>
         </div>
+    </div>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMnBK12_2U5lT9hAYbKx8vaEgNWYJshcs&libraries=places" async defer></script>
     <script type="module" src="app.js"></script>
