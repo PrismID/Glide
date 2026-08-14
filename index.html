@@ -2,17 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Glide</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="background-decorations">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
     <div class="login-panel">
-        <h1><strong>Welcome Back To Glide</strong></h1>
-        <input type="email" id="email" placeholder="Email Address">
-        <input type="password" id="password" placeholder="Password">
+        <div class="logo-container">
+            <span class="logo-text">GLIDE</span>
+            <span class="logo-subtitle">Your private ride</span>
+        </div>
+        <h1>Welcome Back</h1>
+        <div class="input-group">
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="password" id="password" placeholder="Password" required>
+        </div>
         <button id="login-btn">Log In</button>
         <a href="signup/" class="link">Create an account</a>
     </div>
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 </html>

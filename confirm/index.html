@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Your Ride - Glide</title>
+    <link rel="stylesheet" href="confirm.css">
+</head>
+<body>
+    <div class="background-decorations">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <div class="confirm-panel">
+        <div class="brand-badge">CONFIRMATION</div>
+        <h1>Your Glide Route</h1>
+
+        <!-- Trip Summary -->
+        <div class="trip-summary">
+            <div class="summary-item">
+                <span class="label">Pickup Location</span>
+                <span class="value" id="pickup-val">Current Location (Wellington, FL)</span>
+            </div>
+            <div class="summary-item">
+                <span class="label">Destination</span>
+                <span class="value" id="destination-val">123 Main St, Wellington, FL</span>
+            </div>
+        </div>
+
+        <h3>Select Ride Tier</h3>
+        <div class="vehicle-tiers">
+            <div class="tier-card active" data-tier="eco" data-price="$15.40">
+                <div class="tier-icon">⚡</div>
+                <div class="tier-details">
+                    <span class="tier-name">Glide Eco</span>
+                    <span class="tier-eta">ETA: 4 Mins</span>
+                </div>
+                <div class="tier-price">$15.40</div>
+            </div>
+
+            <div class="tier-card" data-tier="premium" data-price="$24.80">
+                <div class="tier-icon">✨</div>
+                <div class="tier-details">
+                    <span class="tier-name">Glide Premium</span>
+                    <span class="tier-eta">ETA: 2 Mins</span>
+                </div>
+                <div class="tier-price">$24.80</div>
+            </div>
+
+            <div class="tier-card" data-tier="ultra" data-price="$38.50">
+                <div class="tier-icon">👑</div>
+                <div class="tier-details">
+                    <span class="tier-name">Glide Ultra</span>
+                    <span class="tier-eta">ETA: 1 Min</span>
+                </div>
+                <div class="tier-price">$38.50</div>
+            </div>
+        </div>
+
+        <!-- Payment Method Row -->
+        <div class="payment-row">
+            <span class="pay-icon">💳</span>
+            <span class="pay-text">Personal •••• 4242</span>
+            <span class="pay-price" id="selected-price">$15.40</span>
+        </div>
+
+        <button id="confirm-btn">Confirm Ride</button>
+        <button id="cancel-btn" class="secondary-btn">Cancel</button>
+    </div>
+
+    <script type="module" src="confirm.js"></script>
+</body>
+</html>
